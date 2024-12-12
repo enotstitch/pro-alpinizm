@@ -2,12 +2,10 @@
 @use '../vars' as *;
 
 .hero {
-	&__wrap {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 50px;
-	}
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 50px;
 
 	&__content {
 		display: flex;
