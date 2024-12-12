@@ -7,12 +7,23 @@
 		display: flex;
 		align-items: center;
 		gap: 20px;
+
+		@media (width <= 1200px) {
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 40px;
+		}
+
+		@media (width <= 768px) {
+			justify-content: center;
+		}
 	}
 }
 
 .advantages-card {
 	display: flex;
 	align-items: center;
+	max-width: 300px;
 	color: var(--dark-color);
 	gap: 30px;
 
@@ -81,5 +92,10 @@
 		.advantages-card__icon {
 			transform: rotate(15deg);
 		}
+	}
+
+	@media (width <= 768px) {
+		width: 100%;
+		max-width: 100%;
 	}
 }
