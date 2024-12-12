@@ -1,19 +1,20 @@
 // * Максимальная и минимальная ширина макета
-$container-width: 1400;
+$container-width: 1170;
 $mobile-width: 420;
 
 :root {
 	// * Цвета
 	--dark-color: #000;
+	--dark-opacity-color: #00000052;
 	--light-color: #fff;
 	--bg-color: #e27d5f;
-	--accent-color: #9fd4ff;
+	--accent-color: #ec691f;
 	--error-color: #f06464;
 
 	// * Шрифты
 	--font-main: 'Circe', sans-serif;
 	--font-second: 'Poppins', sans-serif;
-	--line-height: 120%;
+	--line-height: 110%;
 
 	// * Визуал
 	--time: 0.2s;
