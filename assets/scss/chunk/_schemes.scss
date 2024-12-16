@@ -1,0 +1,153 @@
+@use 'mixins/adaptive-font' as *;
+@use '../vars' as *;
+
+.schemes {
+	// &__wrap {
+	// 	display: flex;
+	// 	align-items: flex-start;
+	// 	justify-content: space-between;
+	// 	gap: 30px;
+
+	// 	@media (width <= 768px) {
+	// 		flex-direction: column;
+	// 	}
+	// }
+
+	// &__title {
+	// 	margin: 0;
+	// 	max-width: 50%;
+
+	// 	@media (width <= 768px) {
+	// 		margin: 0 auto;
+	// 		max-width: 100%;
+	// 		text-align: center;
+	// 	}
+	// }
+
+	// &__text {
+	// 	margin: 0;
+	// 	max-width: 50%;
+	// 	line-height: var(--line-height-big);
+	// 	color: var(--gray-text-color);
+	// 	@include adaptive-font(16, 16);
+
+	// 	@media (width <= 768px) {
+	// 		max-width: 100%;
+	// 		text-align: center;
+	// 	}
+	// }
+
+	&__cards {
+		display: grid;
+		align-items: flex-start;
+		grid-template-columns: repeat(4, 1fr);
+		padding-top: 70px;
+		gap: 30px;
+
+		@media (width <= 992px) {
+			align-items: stretch;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (width <= 768px) {
+			align-items: flex-start;
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
+
+.schemes-card {
+	position: relative;
+	border-top: 5px solid var(--accent-color);
+	border-radius: 12px;
+	padding: 40px;
+	box-shadow: 0 5px 24px 0 rgb(217 217 217 / 20%);
+	text-align: center;
+	background-color: var(--accent-color);
+	transition: all var(--time);
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: 2;
+		border-radius: 12px;
+		height: 0;
+		background-color: var(--light-color);
+		opacity: 0;
+		visibility: hidden;
+		transition: all var(--time);
+	}
+
+	&__icon {
+		position: relative;
+		z-index: 4;
+		margin-bottom: 15px;
+		width: 76px;
+		height: 60px;
+
+		use {
+			fill: var(--light-color);
+		}
+	}
+
+	&__title {
+		position: relative;
+		z-index: 4;
+		margin: 0;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		@include adaptive-font(16, 16);
+
+		&--big {
+			font-weight: 700;
+			@include adaptive-font(50, 40);
+		}
+	}
+
+	&__text {
+		position: relative;
+		z-index: 4;
+
+		&--uppercase {
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+	}
+
+	&:hover {
+		background: var(--light-color);
+		transform: translateY(-15px);
+		transition: all var(--time);
+
+		&::after {
+			height: 100%;
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.schemes-card__icon {
+			use {
+				fill: var(--accent-color);
+			}
+		}
+
+		.schemes-card__title {
+			color: var(--gray-text-color);
+		}
+
+		.schemes-card__text {
+			color: var(--gray-text-color);
+		}
+	}
+
+	&:nth-child(even) {
+		margin-top: 50px;
+
+		@media (width <= 992px) {
+			margin-top: 0;
+		}
+	}
+}

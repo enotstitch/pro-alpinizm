@@ -7,17 +7,22 @@ $mobile-width: 420;
 	--dark-color: #000;
 	--dark-opacity-color: #00000052;
 	--light-color: #fff;
-	--bg-color: #e27d5f;
+	--bg-color: #191818;
 	--accent-color: #ec691f;
+	--gray-color: #dcdada;
+	--gray-text-color: #707173;
+	--dark-title-color: #393738;
+	--red-color: #d21c1d;
 	--error-color: #f06464;
 
 	// * Шрифты
-	--font-main: 'Circe', sans-serif;
-	--font-second: 'Poppins', sans-serif;
-	--line-height: 110%;
+	--font-main: 'Roboto', sans-serif;
+	--font-second: 'Inter', sans-serif;
+	--line-height: 120%;
+	--line-height-big: 170%;
 
 	// * Визуал
-	--time: 0.2s;
+	--time: 0.3s;
 	--radius: 15px;
 
 	// * Медиа бургера

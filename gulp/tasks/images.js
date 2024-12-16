@@ -17,7 +17,7 @@ export const images = async () => {
 		.pipe(app.gulp.dest(app.path.build.images));
 
 	return app.gulp
-		.src([`${app.path.src.images}**/*.{gif,svg}`, `!${app.path.src.images}svg/**/*`], {
+		.src([`${app.path.src.images}**/*.{webp,gif,svg}`, `!${app.path.src.images}svg/**/*`], {
 			encoding: false,
 		})
 		.pipe(app.plugins.newer(app.path.build.images))

@@ -1,4 +1,6 @@
 @use './chunk/burger-menu';
+@use 'mixins/adaptive-font' as *;
+@use 'vars' as *;
 
 .logo {
 	display: flex;
@@ -60,5 +62,134 @@
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+	}
+
+	&-articles {
+		background-image: url('@img/articles/articles-bg.webp');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	&--dark-bg {
+		background-image: url('@img/general/bg.webp');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: var(--bg-color);
+	}
+}
+
+.title {
+	margin: 0;
+	font-family: var(--font-second);
+	font-weight: 800;
+	color: var(--dark-title-color);
+	@include adaptive-font(36, 30);
+
+	&--center {
+		margin: 0 auto;
+		margin-bottom: 50px;
+		max-width: fit-content;
+		text-align: center;
+	}
+
+	&--light-color {
+		color: var(--light-color);
+	}
+}
+
+.subtitle {
+	margin: 0;
+	max-width: fit-content;
+	font-family: var(--second-font);
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	@include adaptive-font(14, 14);
+
+	&--dark-color {
+		color: var(--gray-text-color);
+	}
+}
+
+.text {
+	margin: 0;
+	line-height: var(--line-height-big);
+	color: var(--gray-text-color);
+	@include adaptive-font(16, 16);
+
+	&--light-color {
+		color: var(--light-color);
+	}
+}
+
+.link {
+	display: inline-block;
+	border-radius: 4px;
+	padding: 10px 22px;
+	text-align: center;
+	background-color: var(--accent-color);
+	transition: background-color var(--time);
+
+	&:hover {
+		background-color: var(--red-color);
+	}
+
+	&--arrow {
+		&::after {
+			content: '';
+			position: relative;
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background-image: url('@img/icons/sprite.svg#arrow');
+			background-position: right;
+			background-repeat: no-repeat;
+			opacity: 0;
+			visibility: hidden;
+			transform: translateX(-100%);
+			transition: all var(--time);
+		}
+
+		&:hover {
+			&::after {
+				padding-left: 15px;
+				opacity: 1;
+				visibility: visible;
+				transform: translateX(0);
+			}
+		}
+	}
+}
+
+.info-card {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 30px;
+
+	&__title {
+		margin: 0;
+		max-width: 50%;
+
+		@media (width <= 768px) {
+			margin: 0 auto;
+			max-width: 100%;
+			text-align: center;
+		}
+	}
+
+	&__text {
+		max-width: 50%;
+
+		@media (width <= 768px) {
+			max-width: 100%;
+			text-align: center;
+		}
+	}
+
+	@media (width <= 768px) {
+		flex-direction: column;
 	}
 }
