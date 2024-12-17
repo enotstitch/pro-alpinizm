@@ -51,9 +51,8 @@
 			text-align: center;
 			color: var(--gray-color);
 			background-color: var(--light-color);
-			transition:
-				background-color var(--time),
-				border-color var(--time);
+			transition-property: background-color, color, border-color;
+			transition-duration: var(--time);
 		}
 	}
 
