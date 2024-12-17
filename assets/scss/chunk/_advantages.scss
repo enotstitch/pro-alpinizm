@@ -4,7 +4,7 @@
 .advantages {
 	counter-reset: card-counter;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	gap: 20px;
 
 	@media (width <= 1200px) {
@@ -20,10 +20,11 @@
 
 .advantages-card {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	max-width: 300px;
 	color: var(--dark-color);
-	gap: 30px;
+	gap: 15px;
 
 	&__inner {
 		counter-increment: card-counter;
@@ -63,7 +64,8 @@
 	&__texts {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
+		text-align: center;
 	}
 
 	&__title {
