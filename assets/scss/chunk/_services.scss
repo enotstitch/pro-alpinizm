@@ -177,6 +177,7 @@
 
 	&__inner {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: flex-start;
 		font-weight: 500;
 		gap: 5px;

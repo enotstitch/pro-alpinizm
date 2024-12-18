@@ -16,10 +16,18 @@
 	}
 
 	&__cards {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 20px;
+		// display: grid;
+		// grid-template-columns: repeat(3, 1fr);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
 		margin-bottom: 50px;
+		gap: 30px;
+
+		@media (width <= 1200px) {
+			justify-content: center;
+		}
 
 		@media (width <= 992px) {
 			display: flex;
@@ -40,6 +48,8 @@
 	flex-direction: column;
 	overflow: hidden;
 	border-radius: 6px;
+	width: 100%;
+	max-width: 370px;
 
 	&__img {
 		transition: scale 0.5s;
@@ -101,11 +111,11 @@
 		}
 	}
 
-	@media (width <= 992px) {
-		max-width: 300px;
-	}
+	// @media (width <= 992px) {
+	// 	max-width: 300px;
+	// }
 
-	@media (width <= 480px) {
-		max-width: 100%;
-	}
+	// @media (width <= 480px) {
+	// 	max-width: 100%;
+	// }
 }
