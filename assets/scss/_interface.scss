@@ -76,6 +76,13 @@
 		background-repeat: no-repeat;
 	}
 
+	&-contacts {
+		background-image: url('../img/contacts/contacts-bg.webp');
+		background-position: left center;
+		background-size: 290px;
+		background-repeat: no-repeat;
+	}
+
 	&--dark-bg {
 		background-image: url('@img/general/bg.webp');
 		background-position: center;
@@ -233,6 +240,10 @@
 	&__text {
 		max-width: 50%;
 
+		&--max-width {
+			max-width: 100%;
+		}
+
 		@media (width <= 768px) {
 			max-width: 100%;
 		}
@@ -240,6 +251,11 @@
 
 	&--center {
 		align-items: center;
+	}
+
+	&--column {
+		flex-direction: column;
+		gap: 30px;
 	}
 
 	@media (width <= 768px) {
