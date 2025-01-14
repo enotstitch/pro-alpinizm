@@ -1,0 +1,45 @@
+@use 'mixins/adaptive-font' as *;
+@use 'vars' as *;
+
+.works {
+	&__cards {
+		display: grid;
+		grid-gap: 30px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.works-card {
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+
+	&__category {
+		margin: 0;
+		margin-bottom: 5px;
+		max-width: fit-content;
+		color: var(--accent-color);
+		transition: color var(--time);
+		@include adaptive-font(16, 16);
+
+		&:hover {
+			color: var(--red-color);
+		}
+	}
+
+	&__title {
+		margin: 0;
+		font-family: var(--font-second);
+		font-weight: 800;
+		@include adaptive-font(28, 28);
+	}
+
+	&__link {
+		color: var(--accent-color);
+		transition: color var(--time);
+
+		&:hover {
+			color: var(--red-color);
+		}
+	}
+}

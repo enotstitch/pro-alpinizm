@@ -1,0 +1,145 @@
+.footer {
+	border-top: 2px solid var(--accent-color);
+	padding: 40px 0;
+
+	&__wrap {
+		display: grid;
+		justify-items: center;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 40px;
+
+		@media (width <= 992px) {
+			gap: 50px 10px;
+		}
+
+		@media (width <= 768px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (width <= 576px) {
+			// ? Есть такое разрешение?
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		@media (768px >= width >= 576px) {
+			&:nth-child(odd) {
+				justify-self: start;
+			}
+
+			&:nth-child(even) {
+				justify-self: end;
+			}
+		}
+
+		@media (width <= 576px) {
+			justify-self: start;
+		}
+	}
+
+	&__logo {
+		display: inline-block;
+		margin-bottom: 20px;
+		max-width: 200px;
+	}
+
+	&__company {
+		display: flex;
+		flex-direction: column;
+		margin-top: auto;
+		gap: 10px;
+	}
+
+	&__details {
+		color: var(--gray-text-color);
+	}
+
+	&__address {
+		font-style: normal;
+		color: var(--gray-text-color);
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		font-size: 24px;
+	}
+
+	&-menu {
+		&__item {
+			margin-bottom: 5px;
+			color: var(--gray-text-color);
+			transition: color var(--time);
+
+			&:hover {
+				color: var(--dark-color);
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&-phone {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+		gap: 10px;
+
+		&__icon {
+			width: 20px;
+			height: 20px;
+
+			use {
+				fill: var(--accent-color);
+			}
+		}
+
+		&__link {
+			font-weight: 600;
+			color: var(--gray-text-color);
+			transition: color var(--time);
+
+			&:hover {
+				color: var(--dark-color);
+			}
+		}
+	}
+
+	&-contacts {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 15px;
+
+		&__item {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		&__icon {
+			width: 20px;
+			height: 20px;
+			background-color: red;
+		}
+
+		&__link {
+			color: var(--gray-text-color);
+			transition: color var(--time);
+
+			&:hover {
+				color: var(--dark-color);
+			}
+		}
+	}
+
+	@media (width <= 768px) {
+		padding: 20px 0;
+	}
+}
