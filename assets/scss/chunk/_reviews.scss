@@ -1,0 +1,79 @@
+@use 'mixins/adaptive-font' as *;
+@use 'vars' as *;
+
+.reviews {
+	&__info-card {
+		margin-bottom: 70px;
+	}
+
+	&__swiper {
+		margin-bottom: 50px;
+	}
+}
+
+.reviews-card {
+	border: 1px solid var(--gray-color);
+	border-radius: 6px;
+	padding: 30px;
+	font-style: italic;
+	cursor: grab;
+	user-select: none;
+
+	&__text {
+		margin-bottom: 20px;
+		@include adaptive-font(18, 18);
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+	}
+
+	&__info {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding-left: 20px;
+		font-family: var(--font-second);
+		font-style: normal;
+		color: var(--gray-text-color);
+		gap: 5px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 3px;
+			height: 100%;
+			background-color: var(--accent-color);
+			transform: translateY(-50%);
+		}
+	}
+
+	&__author {
+		font-weight: 800;
+		color: var(--dark-color);
+		@include adaptive-font(20, 20);
+	}
+
+	&__city {
+		position: relative;
+		@include adaptive-font(16, 16);
+
+		&::before {
+			content: 'город ';
+			position: relative;
+		}
+	}
+
+	&__service {
+		flex-shrink: 0;
+		width: 50px;
+		height: 50px;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}

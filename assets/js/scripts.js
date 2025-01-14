@@ -1,6 +1,6 @@
 import { initHeader } from './modules/header/header.js';
 import { Tabs } from './scripts/tabs.js';
-import { lettersSwiper, technicSwiper } from './scripts/sliders.js';
+import { lettersSwiper, technicSwiper, reviewsSwiper } from './scripts/sliders.js';
 import { skillsProgressInit } from './scripts/skillsProgress.js';
 import { select } from './scripts/select.js';
 
@@ -22,5 +22,6 @@ skillsProgressInit();
 
 lettersSwiper.init();
 technicSwiper.init();
+reviewsSwiper.init();
 
 select();

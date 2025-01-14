@@ -2,13 +2,16 @@
 @use 'vars' as *;
 
 .articles {
+	&__info-card {
+		margin-bottom: 70px;
+	}
+
 	&__cards {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: flex-start;
 		justify-content: space-between;
 		margin-bottom: 50px;
-		padding-top: 40px;
 		gap: 30px;
 
 		@media (width <= 1200px) {
