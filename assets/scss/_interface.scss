@@ -188,14 +188,11 @@
 
 	&--arrow {
 		&::after {
-			content: '';
+			content: '\f101';
 			position: relative;
 			display: inline-block;
-			width: 10px;
-			height: 10px;
-			background-image: url('@img/icons/sprite.svg#arrow');
-			background-position: right;
-			background-repeat: no-repeat;
+			font-family: Awesome-Solid, sans-serif;
+			color: currentcolor;
 			opacity: 0;
 			visibility: hidden;
 			transform: translateX(-100%);
@@ -204,7 +201,7 @@
 
 		&:hover {
 			&::after {
-				padding-left: 15px;
+				padding-left: 10px;
 				opacity: 1;
 				visibility: visible;
 				transform: translateX(0);
