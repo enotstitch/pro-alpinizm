@@ -1,0 +1,161 @@
+.contacts {
+	display: flex;
+	gap: 70px;
+	align-items: start;
+	justify-content: space-between;
+
+	@media (width <= 992px) {
+		flex-direction: column;
+	}
+}
+
+.contacts-info {
+	border-radius: 8px;
+	padding: 65px 60px;
+	max-width: 45%;
+	box-shadow: 0 12px 21px 0 rgb(0 0 0 / 10%);
+	background-color: var(--light-color);
+
+	&__info-card {
+		margin-bottom: 50px;
+	}
+
+	&__list {
+		margin-bottom: 40px;
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		margin-bottom: 40px;
+	}
+
+	&__text {
+		margin: 0;
+		font-size: 16px;
+		color: var(--gray-text-color);
+
+		&--bold {
+			font-weight: 700;
+		}
+	}
+
+	&__link {
+		display: block;
+		margin-bottom: 20px;
+		width: fit-content;
+		font-size: 16px;
+		color: var(--accent-color);
+		transition: filter var(--time);
+
+		&:hover {
+			filter: brightness(0.75);
+		}
+	}
+
+	&__socials {
+		display: flex;
+		justify-content: space-between;
+		gap: 5px;
+	}
+
+	&__social {
+		font-size: 30px;
+		transition: filter var(--time);
+
+		&:hover {
+			filter: brightness(0.75);
+		}
+
+		&--wa {
+			color: #43d854;
+		}
+
+		&--tg {
+			color: #08c;
+		}
+
+		&--vk {
+			color: #597da3;
+		}
+
+		&--tt {
+			color: #001c40;
+		}
+
+		&--yt {
+			color: #f03;
+		}
+
+		&--ig {
+			color: #e4405f;
+		}
+	}
+
+	@media (width <= 992px) {
+		max-width: 100%;
+	}
+}
+
+.contact {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+	border-bottom: 1px solid var(--gray-color);
+	padding-bottom: 30px;
+	gap: 20px;
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 3px;
+	}
+
+	&__icon {
+		border-radius: 8px;
+		padding: 15px;
+		width: fit-content;
+		background-color: var(--accent-color);
+
+		& svg {
+			display: flex;
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 10px;
+		font-family: var(--font-second);
+		font-weight: 600;
+		font-size: 20px;
+		color: var(--dark-title-color);
+	}
+
+	&__text {
+		font-style: normal;
+		font-size: 16px;
+		color: var(--gray-text-color);
+		transition: filter var(--time);
+
+		&--hover:hover {
+			filter: brightness(0.75);
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.contacts-form {
+	max-width: 45%;
+	background-color: var(--gray-color);
+
+	@media (width <= 992px) {
+		max-width: 100%;
+	}
+}
