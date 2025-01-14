@@ -72,10 +72,11 @@
 		margin: 0;
 		margin-bottom: 10px;
 		font-family: var(--font-second);
+		color: var(--dark-title-color);
 		@include adaptive-font(20, 16);
 	}
 
-	&__descr {
+	&__text {
 		@include adaptive-font(15, 15);
 	}
 

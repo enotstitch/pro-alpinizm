@@ -2,46 +2,14 @@
 @use '../vars' as *;
 
 .schemes {
-	// &__wrap {
-	// 	display: flex;
-	// 	align-items: flex-start;
-	// 	justify-content: space-between;
-	// 	gap: 30px;
-
-	// 	@media (width <= 768px) {
-	// 		flex-direction: column;
-	// 	}
-	// }
-
-	// &__title {
-	// 	margin: 0;
-	// 	max-width: 50%;
-
-	// 	@media (width <= 768px) {
-	// 		margin: 0 auto;
-	// 		max-width: 100%;
-	// 		text-align: center;
-	// 	}
-	// }
-
-	// &__text {
-	// 	margin: 0;
-	// 	max-width: 50%;
-	// 	line-height: var(--line-height-big);
-	// 	color: var(--gray-text-color);
-	// 	@include adaptive-font(16, 16);
-
-	// 	@media (width <= 768px) {
-	// 		max-width: 100%;
-	// 		text-align: center;
-	// 	}
-	// }
+	&__info-card {
+		margin-bottom: 70px;
+	}
 
 	&__cards {
 		display: grid;
 		align-items: flex-start;
 		grid-template-columns: repeat(4, 1fr);
-		padding-top: 70px;
 		gap: 30px;
 
 		@media (width <= 992px) {

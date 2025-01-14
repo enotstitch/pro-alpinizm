@@ -1,0 +1,12 @@
+@use 'mixins/adaptive-font' as *;
+@use 'vars' as *;
+
+.letters {
+	&__info-card {
+		margin-bottom: 70px;
+	}
+
+	&__swiper {
+		margin-bottom: 50px;
+	}
+}

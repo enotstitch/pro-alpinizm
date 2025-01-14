@@ -35,7 +35,7 @@
 		@include adaptive-font(42, 18);
 	}
 
-	&-descr {
+	&-text {
 		padding: 20px;
 		max-width: 530px;
 		line-height: var(--line-height);
