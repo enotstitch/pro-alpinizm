@@ -450,10 +450,33 @@
 	}
 
 	&__link {
-		font-weight: 600;
+		position: relative;
+		display: flex;
+		align-items: center;
+		max-width: fit-content;
+		font-weight: 900;
 		letter-spacing: 1px;
 		text-transform: uppercase;
+		gap: 5px;
+		transition: color var(--time);
 		@include adaptive-font(15, 15);
+
+		&::after {
+			content: '\f101';
+			position: relative;
+			display: inline-block;
+			font-family: Awesome-Solid, sans-serif;
+			color: currentcolor;
+			transition: transform var(--time);
+		}
+
+		&:hover {
+			color: var(--red-color);
+
+			&::after {
+				transform: translateX(5px);
+			}
+		}
 	}
 }
 
