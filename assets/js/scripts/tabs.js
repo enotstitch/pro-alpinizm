@@ -1,6 +1,7 @@
 export class Tabs {
 	constructor(headerSelector, tabSelector, contentSelector, activeClass, display = 'flex') {
 		this.header = document.querySelector(headerSelector);
+		if (!this.header) return;
 		this.tab = document.querySelectorAll(tabSelector);
 		this.content = document.querySelectorAll(contentSelector);
 		this.activeClass = activeClass;

@@ -3,6 +3,7 @@
 
 .hero {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
 	gap: 50px;
@@ -12,6 +13,10 @@
 		flex-direction: column;
 		align-items: flex-start;
 		max-width: 650px;
+
+		@media (width <= 1025px) {
+			max-width: 100%;
+		}
 	}
 
 	&__titles {
@@ -50,6 +55,29 @@
 	&__form {
 		border-radius: 6px;
 		padding: 20px;
+		width: 420px;
 		background-color: var(--dark-opacity-color);
+
+		@media (width <= 992px) {
+			display: none;
+		}
+	}
+
+	&__link {
+		padding: 15px 25px;
+		font-weight: 600;
+		font-size: 18px;
+
+		@media (width <= 768px) {
+			width: 100%;
+		}
+
+		@media (width >= 992px) {
+			display: none;
+		}
+	}
+
+	@media (width <= 992px) {
+		gap: 30px;
 	}
 }

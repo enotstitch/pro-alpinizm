@@ -17,8 +17,11 @@ export const select = function () {
 	function selectChoose() {
 		const text = this.innerText,
 			select = this.closest('.select'),
-			currentText = select.querySelector('.select__current');
+			currentText = select.querySelector('.select__current'),
+			cost = this.dataset.cost;
+
 		currentText.innerText = text;
 		select.classList.remove('is-active');
+		select.dataset.cost = cost;
 	}
 };
