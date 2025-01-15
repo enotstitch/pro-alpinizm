@@ -10,49 +10,24 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		margin-bottom: 50px;
-		border: 2px solid var(--gray-color);
-		border-radius: 6px;
-		padding: 15px 0;
-		gap: 20px 0;
+		gap: 10px 20px;
 
 		&-item {
-			position: relative;
-			padding: 0 25px;
+			border-radius: 10px;
+			padding: 10px 15px;
 			font-weight: 500;
-			color: var(--dark-title-color);
-			transition: color var(--time);
+			color: var(--light-color);
+			background-color: var(--accent-color);
+			transition: background-color var(--time);
 			cursor: pointer;
 			@include adaptive-font(16, 16);
 
-			&::after {
-				content: '';
-				position: absolute;
-				right: 0;
-				top: 50%;
-				width: 2px;
-				height: 100%;
-				background-color: var(--gray-color);
-				transform: translateY(-50%);
-			}
-
 			&:hover {
-				color: var(--accent-color);
-			}
-
-			&:first-child {
-				padding-left: 0;
-			}
-
-			&:last-child {
-				padding-right: 0;
-
-				&::after {
-					display: none;
-				}
+				background-color: var(--red-color);
 			}
 
 			&.active {
-				color: var(--accent-color);
+				background-color: var(--red-color);
 			}
 		}
 	}
@@ -64,24 +39,16 @@
 
 		&-item {
 			display: grid;
-			grid-auto-rows: 24vw;
-			grid-template-columns: repeat(4, 24vw);
+			grid-template-columns: repeat(3, 1fr);
 			width: fit-content;
-			gap: 5px;
+			gap: 25px;
 
 			@media (width <= 992px) {
-				grid-auto-rows: 33vw;
-				grid-template-columns: repeat(3, 33vw);
+				grid-template-columns: repeat(2, 1fr);
 			}
 
 			@media (width <= 768px) {
-				grid-auto-rows: 49vw;
-				grid-template-columns: repeat(2, 49vw);
-			}
-
-			@media (width <= 480px) {
-				grid-auto-rows: 99vw;
-				grid-template-columns: 100vw;
+				grid-template-columns: repeat(1, 1fr);
 			}
 		}
 	}
@@ -90,36 +57,43 @@
 .services-card {
 	position: relative;
 	display: flex;
-	align-items: flex-end;
+	flex-direction: column;
 	overflow: hidden;
 	border-radius: 25px;
-	padding: 35px;
 	width: 100%;
+	max-width: 350px;
+	box-shadow: 0 0 10px rgb(0 0 0 / 25%);
 	line-height: var(--line-height-big);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 
-	&::before {
-		content: '';
+	&__img {
+		display: flex;
+		flex-shrink: 0;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		max-height: 200px;
+	}
+
+	&__price {
 		position: absolute;
 		right: 0;
 		top: 0;
-		width: 100%;
-		height: 100%;
-		background-color: var(--dark-opacity-color);
-		transition: background-color var(--time);
+		border-radius: 0 10px;
+		padding: 5px 10px;
+		font-family: var(--font-second);
+		background-color: var(--accent-color);
 	}
 
 	&__title {
 		position: relative;
-		z-index: 1;
 		margin: 0;
+		max-width: fit-content;
 		font-family: var(--font-second);
 		font-weight: 700;
-		transition-property: opacity, visibility;
-		transition-duration: 0.5s;
-		@include adaptive-font(24, 20);
+		@include adaptive-font(24, 18);
 
 		&::before {
 			content: '|';
@@ -129,74 +103,54 @@
 			font-weight: 400;
 			color: var(--accent-color);
 			@include adaptive-font(22, 20);
+		}
+
+		a {
+			color: var(--dark-color);
+			transition: color var(--time);
+
+			&:hover {
+				color: var(--accent-color);
+			}
 		}
 	}
 
 	&__links {
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		z-index: 1;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		padding: 35px;
+		padding: 30px;
 		width: 100%;
-		opacity: 0;
-		visibility: hidden;
-		transform: translateY(50px);
 		transition-property: transform, opacity, visibility;
 		transition-duration: 0.5s;
-		gap: 20px;
+		gap: 30px;
+		@include adaptive-font(18, 18);
 	}
 
 	&__link {
 		position: relative;
+		margin: 0 auto;
+		padding: 0;
 		max-width: fit-content;
 		font-family: var(--font-second);
 		font-weight: 700;
-		color: var(--dark-color);
+		color: var(--gray-text-color);
+		background-color: transparent;
 		transition: color var(--time);
-		@include adaptive-font(24, 20);
-
-		&::before {
-			content: '|';
-			position: absolute;
-			left: -14px;
-			top: 0;
-			font-weight: 400;
-			color: var(--accent-color);
-			pointer-events: none;
-			@include adaptive-font(22, 20);
-		}
 
 		&:hover {
-			color: var(--accent-color);
+			color: var(--red-color);
+			background-color: transparent;
 		}
 	}
 
 	&__inner {
 		display: flex;
-		flex-wrap: wrap;
+		flex-flow: column wrap;
 		align-items: flex-start;
+		align-items: stretch;
+		width: 100%;
 		font-weight: 500;
 		gap: 5px;
-	}
-
-	&:hover {
-		&::before {
-			background-color: rgb(220 218 218 / 92%);
-		}
-
-		.services-card__title {
-			opacity: 0;
-			visibility: hidden;
-		}
-
-		.services-card__links {
-			opacity: 1;
-			visibility: visible;
-			transform: translateY(0);
-		}
 	}
 }
