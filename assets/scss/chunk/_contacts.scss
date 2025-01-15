@@ -53,49 +53,6 @@
 			filter: brightness(0.75);
 		}
 	}
-
-	&__socials {
-		display: flex;
-		justify-content: space-between;
-		gap: 5px;
-	}
-
-	&__social {
-		font-size: 30px;
-		transition: filter var(--time);
-
-		&:hover {
-			filter: brightness(0.75);
-		}
-
-		&--wa {
-			color: #43d854;
-		}
-
-		&--tg {
-			color: #08c;
-		}
-
-		&--vk {
-			color: #597da3;
-		}
-
-		&--tt {
-			color: #001c40;
-		}
-
-		&--yt {
-			color: #f03;
-		}
-
-		&--ig {
-			color: #e4405f;
-		}
-	}
-
-	@media (width <= 992px) {
-		max-width: 100%;
-	}
 }
 
 .contact {
@@ -114,15 +71,19 @@
 	}
 
 	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		border-radius: 8px;
-		padding: 15px;
-		width: fit-content;
+		width: 100%;
+		min-height: 70px;
+		max-width: 70px;
+		font-family: Awesome-Solid, sans-serif;
+		font-size: 30px;
 		background-color: var(--accent-color);
 
-		& svg {
-			display: flex;
-			width: 30px;
-			height: 30px;
+		&::before {
+			content: var(--fa);
 		}
 	}
 

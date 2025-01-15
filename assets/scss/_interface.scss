@@ -87,6 +87,52 @@
 	}
 }
 
+.socials {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-family: Awesome-Brands, sans-serif;
+	font-size: 30px;
+	color: var(--accent-color);
+	gap: 5px;
+
+	&__link {
+		transition: transform var(--time);
+
+		&::before {
+			content: var(--fa);
+		}
+
+		&:hover {
+			transform: scale(1.1);
+		}
+
+		&--wa {
+			color: #43d854;
+		}
+
+		&--tg {
+			color: #08c;
+		}
+
+		&--vk {
+			color: #597da3;
+		}
+
+		&--tt {
+			color: #001c40;
+		}
+
+		&--yt {
+			color: #f03;
+		}
+
+		&--ig {
+			color: #e4405f;
+		}
+	}
+}
+
 .section {
 	padding: 100px 0;
 
