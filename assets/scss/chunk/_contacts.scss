@@ -99,6 +99,7 @@
 	&__text {
 		font-style: normal;
 		font-size: 16px;
+		line-height: var(--line-height-big);
 		color: var(--gray-text-color);
 		transition: filter var(--time);
 
