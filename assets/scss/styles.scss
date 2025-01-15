@@ -11,6 +11,8 @@
 @use './chunk/advantages';
 @use './chunk/services';
 @use './chunk/schemes';
+
+@use './chunk/examples';
 @use './chunk/team';
 @use './chunk/technic';
 @use './chunk/letters';
@@ -20,3 +22,5 @@
 @use './chunk/footer';
 @use './chunk/contacts';
 @use './chunk/calc';
+@use './chunk/price';
+@use './chunk/application';
