@@ -75,7 +75,7 @@ export const examplesSwiper = new Swiper('.examples__swiper', {
 	centeredSlides: false,
 
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: '.swiper-button-next--examples',
+		prevEl: '.swiper-button-prev--examples',
 	},
 });

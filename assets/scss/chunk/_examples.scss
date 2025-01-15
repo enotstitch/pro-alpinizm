@@ -1,39 +1,95 @@
 .examples {
+	&__wrap {
+		display: flex;
+		padding-bottom: 70px;
+	}
+
 	&__inner {
+		position: relative;
 		padding: 80px 70px;
-		min-height: 500px;
+		min-height: 400px;
 		max-width: 30%;
 		background-image: url('@img/examples/bg.webp');
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-color: var(--bg-color);
+
+		& .swiper-button-next {
+			right: calc(50% - 35px);
+			top: unset;
+			bottom: 35px;
+			transform: translateX(50%);
+		}
+
+		& .swiper-button-prev {
+			left: calc(50% - 35px);
+			top: unset;
+			bottom: 35px;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__swiper {
+		position: static;
+		padding: 0;
 	}
 }
 
 .examples-card {
 	position: relative;
+	display: flex;
 	overflow: hidden;
 	border-radius: 10px;
 	min-height: 400px;
 	max-width: 310px;
 
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to bottom, transparent 0%, #000 108%);
+	}
+
 	&__info {
 		position: absolute;
 		left: 0;
 		bottom: 0;
+		z-index: 2;
 		padding: 50px 20px;
-		width: 100%;
 	}
 
 	&__title {
+		position: relative;
 		margin: 0;
 		font-size: 24px;
 		color: var(--light-color);
+
+		&::before {
+			content: '|';
+			position: absolute;
+			left: -14px;
+			top: 0;
+			font-weight: 400;
+			font-size: 22px;
+			color: var(--accent-color);
+		}
 	}
 
 	&__subtitle {
 		margin: 0;
+		margin-bottom: 10px;
 		font-size: 16px;
+	}
+
+	&__link {
+		transition: color var(--time);
+
+		&:hover {
+			color: var(--accent-color);
+		}
 	}
 }

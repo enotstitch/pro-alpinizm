@@ -668,6 +668,11 @@
 	text-align: left;
 	color: #000;
 
+	& thead {
+		color: var(--light-color);
+		background-color: var(--accent-color);
+	}
+
 	& th,
 	& td {
 		border: 2px solid #f9f9f9;

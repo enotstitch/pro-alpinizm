@@ -1,6 +1,6 @@
 import { initHeader } from './modules/header/header.js';
 import { Tabs } from './scripts/tabs.js';
-import { lettersSwiper, technicSwiper, reviewsSwiper } from './scripts/sliders.js';
+import { lettersSwiper, technicSwiper, reviewsSwiper, examplesSwiper } from './scripts/sliders.js';
 import { skillsProgressInit } from './scripts/skillsProgress.js';
 import { select } from './scripts/select.js';
 import { Calc } from './scripts/calc.js';
@@ -20,6 +20,7 @@ skillsProgressInit();
 lettersSwiper.init();
 technicSwiper.init();
 reviewsSwiper.init();
+examplesSwiper.init();
 
 select();
 new Calc('.calc__form');
