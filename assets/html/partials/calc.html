@@ -35,7 +35,7 @@
 						Калькулятор
 					</h3>
 					<form class="calc__form" action="#">
-						<div class="select" id="type">
+						<div class="select" id="type" data-cost="100">
 							<div class="select__header">
 								<span class="select__current">Гидроструйная очистка внутренней
 									поверхности АВД (250 бар)</span>
@@ -52,9 +52,17 @@
 							</div>
 						</div>
 
-						<!-- <input class="calc__input" id="square" type="number" placeholder="Площадь *">
-						<input class="calc__input" id="name" type="text" placeholder="Имя *">
-						<input class="calc__input" id="phone" type="tel" placeholder="Телефон *"> -->
+						<label for="square">
+							<input class="calc__input" id="square" type="number" placeholder="Площадь *">
+						</label>
+
+						<label for="name">
+							<input class="calc__input" id="name" type="text" placeholder="Имя *">
+						</label>
+
+						<label for="phone">
+							<input class="calc__input" id="phone" type="tel" placeholder="Телефон *">
+						</label>
 
 						<div class="calc__price">
 							<span class="calc__details">
@@ -65,7 +73,9 @@
 							</span>
 						</div>
 
-						<!-- <input class="calc__submit btn-reset" type="submit" value="Отправить"> -->
+						<label for="submit">
+							<input class="calc__submit btn-reset" id="submit" type="submit" value="Отправить">=
+						</label>
 					</form>
 				</div>
 			</div>

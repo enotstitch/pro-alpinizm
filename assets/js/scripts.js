@@ -3,20 +3,17 @@ import { Tabs } from './scripts/tabs.js';
 import { lettersSwiper, technicSwiper, reviewsSwiper } from './scripts/sliders.js';
 import { skillsProgressInit } from './scripts/skillsProgress.js';
 import { select } from './scripts/select.js';
+import { Calc } from './scripts/calc.js';
 
 initHeader();
 
-try {
-	new Tabs(
-		'.services-tabs__header',
-		'.services-tabs__header-item',
-		'.services-tabs__content-item',
-		'active',
-		'grid',
-	);
-} catch {
-	console.log('Ошибка');
-}
+new Tabs(
+	'.services-tabs__header',
+	'.services-tabs__header-item',
+	'.services-tabs__content-item',
+	'active',
+	'grid',
+);
 
 skillsProgressInit();
 
@@ -25,3 +22,4 @@ technicSwiper.init();
 reviewsSwiper.init();
 
 select();
+new Calc('.calc__form');
