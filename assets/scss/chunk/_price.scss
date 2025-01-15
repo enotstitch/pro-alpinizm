@@ -1,0 +1,13 @@
+.price {
+	&__subtitle {
+		margin-bottom: 20px;
+	}
+
+	&__table {
+		margin-bottom: 50px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

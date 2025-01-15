@@ -607,3 +607,58 @@
 		display: block;
 	}
 }
+
+.table {
+	overflow: hidden;
+	border-collapse: collapse;
+	border-radius: 20px;
+	width: 100%;
+	box-shadow: 0 0 25px 0 rgb(0 0 0 / 10%);
+	text-align: left;
+	color: #000;
+
+	& th,
+	& td {
+		border: 2px solid #f9f9f9;
+		padding: 20px 30px 20px 20px;
+	}
+
+	& th {
+		border-top: none;
+	}
+
+	& th:first-child,
+	& td:first-child {
+		border-left: none;
+	}
+
+	& th:last-child,
+	& td:last-child {
+		border-right: none;
+	}
+
+	& tr:last-child > td {
+		border-bottom: none;
+	}
+
+	&__link {
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 1px;
+			background-color: var(--accent-color);
+			transition: width var(--time);
+		}
+
+		&:hover {
+			&::after {
+				width: 0;
+			}
+		}
+	}
+}
