@@ -1,3 +1,21 @@
+.fa-solid {
+	&::before {
+		content: var(--fa);
+		font-family: Awesome-Solid, sans-serif;
+	}
+}
+
+.fa-brands {
+	&::before {
+		content: var(--fa);
+		font-family: Awesome-Brands, sans-serif;
+	}
+}
+
+.fa-phone {
+	--fa: '\f095';
+}
+
 .fa-whatsapp {
 	--fa: '\f232';
 }

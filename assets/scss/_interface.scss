@@ -103,17 +103,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	font-family: Awesome-Brands, sans-serif;
 	font-size: 30px;
 	color: var(--accent-color);
 	gap: 5px;
 
 	&__link {
 		transition: transform var(--time);
-
-		&::before {
-			content: var(--fa);
-		}
 
 		&:hover {
 			transform: scale(1.1);
