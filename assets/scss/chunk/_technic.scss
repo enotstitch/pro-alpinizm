@@ -5,7 +5,12 @@
 		margin-bottom: 70px;
 	}
 
+	&__wrap {
+		position: relative;
+	}
+
 	&__swiper {
+		position: static;
 		margin-bottom: 50px;
 	}
 
