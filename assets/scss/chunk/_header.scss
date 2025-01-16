@@ -222,7 +222,7 @@
 }
 
 .menu-item-has-children {
-	::after {
+	&::after {
 		content: '';
 		position: absolute;
 		left: 0;
@@ -232,14 +232,18 @@
 		visibility: hidden;
 	}
 
-	&:hover::after {
-		visibility: visible;
+	&:hover {
+		&::after {
+			visibility: visible;
+		}
 	}
 }
 
-.sub-menu .menu-item-has-children::after {
-	left: -20px;
-	width: calc(100% + 40px);
+.sub-menu .menu-item-has-children {
+	&::after {
+		left: -20px;
+		width: calc(100% + 40px);
+	}
 }
 
 .sub-menu,
