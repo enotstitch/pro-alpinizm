@@ -4,6 +4,7 @@ import { lettersSwiper, technicSwiper, reviewsSwiper, examplesSwiper } from './s
 import { skillsProgressInit } from './scripts/skillsProgress.js';
 import { select } from './scripts/select.js';
 import { Calc } from './scripts/calc.js';
+import { spollersInit } from './scripts/spollers.js';
 
 initHeader();
 
@@ -24,3 +25,4 @@ examplesSwiper.init();
 
 select();
 new Calc('.calc__form');
+spollersInit();

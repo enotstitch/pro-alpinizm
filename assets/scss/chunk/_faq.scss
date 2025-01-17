@@ -1,0 +1,62 @@
+@use '../mixins/adaptive-font' as *;
+
+.faq {
+	&__title {
+		margin-bottom: 70px;
+	}
+}
+
+.spollers {
+	&__item {
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		position: relative;
+		border: 2px solid var(--dark-title-color);
+		border-radius: 10px;
+		padding: 10px;
+		width: 100%;
+		text-align: left;
+		color: var(--dark-title-color);
+		transition-property: border-color, background-color, color;
+		transition-duration: var(--time);
+		@include adaptive-font(18, 16);
+
+		&.active {
+			border-color: var(--accent-color);
+			color: var(--light-color);
+			background-color: var(--accent-color);
+		}
+	}
+
+	&__text {
+		padding: 15px;
+		line-height: 130%;
+		color: var(--dark-color);
+	}
+
+	&.init .spollers__title {
+		padding: 15px 40px 15px 10px;
+	}
+
+	&.init .spollers__title::after {
+		content: '\f063';
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		width: auto;
+		height: auto;
+		font-family: Awesome-Solid, sans-serif;
+		transform: translateY(-50%);
+		transition: transform 0.3s ease 0s;
+	}
+
+	&.init .spollers__title.active::after {
+		transform: translateY(-50%) rotate(180deg);
+	}
+}
