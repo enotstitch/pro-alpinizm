@@ -1,6 +1,7 @@
 export class Calc {
 	constructor(calcSelector) {
 		this.calc = document.querySelector(calcSelector);
+		if (!this.calc) return;
 		this.type = this.calc.querySelector('.select');
 		this.typeName = this.type.querySelector('.select__current').innerText;
 		this.typeCost = this.type.dataset.cost;
