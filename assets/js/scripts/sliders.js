@@ -7,7 +7,7 @@ export const lettersSwiper = new Swiper('.letters__swiper', {
 	init: false,
 	direction: 'horizontal',
 	loop: false,
-	slidesPerView: 3,
+	slidesPerView: 1,
 	spaceBetween: 40,
 	centeredSlides: false,
 
@@ -19,6 +19,15 @@ export const lettersSwiper = new Swiper('.letters__swiper', {
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
+	},
+
+	breakpoints: {
+		992: {
+			slidesPerView: 3,
+		},
+		576: {
+			slidesPerView: 2,
+		},
 	},
 });
 
@@ -28,7 +37,7 @@ export const technicSwiper = new Swiper('.technic__swiper', {
 	init: false,
 	direction: 'horizontal',
 	loop: false,
-	slidesPerView: 3,
+	slidesPerView: 1,
 	spaceBetween: 40,
 	centeredSlides: false,
 
@@ -40,6 +49,15 @@ export const technicSwiper = new Swiper('.technic__swiper', {
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
+	},
+
+	breakpoints: {
+		992: {
+			slidesPerView: 3,
+		},
+		576: {
+			slidesPerView: 2,
+		},
 	},
 });
 
@@ -49,7 +67,7 @@ export const reviewsSwiper = new Swiper('.reviews__swiper', {
 	init: false,
 	direction: 'horizontal',
 	loop: false,
-	slidesPerView: 3,
+	slidesPerView: 1,
 	spaceBetween: 40,
 	centeredSlides: false,
 
@@ -62,6 +80,15 @@ export const reviewsSwiper = new Swiper('.reviews__swiper', {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
+
+	breakpoints: {
+		992: {
+			slidesPerView: 3,
+		},
+		576: {
+			slidesPerView: 2,
+		},
+	},
 });
 
 export const examplesSwiper = new Swiper('.examples__swiper', {
@@ -70,12 +97,21 @@ export const examplesSwiper = new Swiper('.examples__swiper', {
 	init: false,
 	direction: 'horizontal',
 	loop: false,
-	slidesPerView: 3,
-	spaceBetween: 40,
+	slidesPerView: 1,
+	spaceBetween: 20,
 	centeredSlides: false,
 
 	navigation: {
 		nextEl: '.swiper-button-next--examples',
 		prevEl: '.swiper-button-prev--examples',
+	},
+
+	breakpoints: {
+		1200: {
+			slidesPerView: 3,
+		},
+		768: {
+			slidesPerView: 2,
+		},
 	},
 });

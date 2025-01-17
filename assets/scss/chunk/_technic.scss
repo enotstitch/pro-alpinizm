@@ -28,4 +28,27 @@
 			grid-template-columns: repeat(1, 1fr);
 		}
 	}
+
+	& .swiper-button-prev {
+		left: 0;
+		transform: translateX(-50%);
+
+		@media (width <= 1200px) {
+			display: none;
+		}
+	}
+
+	& .swiper-button-next {
+		right: 0;
+		transform: translateX(50%);
+
+		@media (width <= 1200px) {
+			display: none;
+		}
+	}
+
+	& .main-card__info::after,
+	& .main-card__info::before {
+		bottom: 95%;
+	}
 }

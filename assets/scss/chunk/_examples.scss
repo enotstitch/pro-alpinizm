@@ -2,13 +2,19 @@
 	&__wrap {
 		display: flex;
 		padding-bottom: 70px;
+		gap: 20px;
+
+		@media (width <= 992px) {
+			flex-direction: column;
+			gap: 30px;
+		}
 	}
 
 	&__inner {
 		position: relative;
 		padding: 80px 70px;
-		min-height: 400px;
-		max-width: 30%;
+		min-height: 450px;
+		max-width: 35%;
 		background-image: url('@img/examples/bg.webp');
 		background-position: center;
 		background-size: cover;
@@ -28,10 +34,18 @@
 			bottom: 35px;
 			transform: translateX(-50%);
 		}
+
+		@media (width <= 992px) {
+			padding: 60px 50px;
+		}
+
+		@media (width <= 992px) {
+			max-width: 100%;
+		}
 	}
 
 	&__swiper {
-		position: static;
+		margin: 0;
 		padding: 0;
 	}
 }
@@ -41,7 +55,7 @@
 	display: flex;
 	overflow: hidden;
 	border-radius: 10px;
-	min-height: 400px;
+	min-height: 450px;
 	max-width: 310px;
 
 	&::after {
@@ -52,6 +66,12 @@
 		width: 100%;
 		height: 100%;
 		background: linear-gradient(to bottom, transparent 0%, #000 108%);
+		transform: scale(1.3);
+		transition: transform var(--time);
+	}
+
+	&__img {
+		transition: transform var(--time);
 	}
 
 	&__info {
@@ -60,12 +80,13 @@
 		bottom: 0;
 		z-index: 2;
 		padding: 50px 20px;
+		transition: padding var(--time);
 	}
 
 	&__title {
 		position: relative;
 		margin: 0;
-		font-size: 24px;
+		font-size: 22px;
 		color: var(--light-color);
 
 		&::before {
@@ -91,5 +112,23 @@
 		&:hover {
 			color: var(--accent-color);
 		}
+	}
+
+	&:hover {
+		&::after {
+			transform: scale(1);
+		}
+
+		.examples-card__img {
+			transform: scale(1.05);
+		}
+
+		.examples-card__info {
+			padding-bottom: 30px;
+		}
+	}
+
+	@media (width <= 992px) {
+		margin: 0 auto;
 	}
 }

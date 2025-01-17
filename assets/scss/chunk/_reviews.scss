@@ -14,6 +14,24 @@
 		position: static;
 		margin-bottom: 50px;
 	}
+
+	& .swiper-button-prev {
+		left: 0;
+		transform: translateX(-50%);
+
+		@media (width <= 1200px) {
+			display: none;
+		}
+	}
+
+	& .swiper-button-next {
+		right: 0;
+		transform: translateX(50%);
+
+		@media (width <= 1200px) {
+			display: none;
+		}
+	}
 }
 
 .reviews-card {
