@@ -20,12 +20,31 @@
 	border: 1px solid var(--gray-color);
 	border-radius: 6px;
 	padding: 30px;
-	font-style: italic;
 	cursor: grab;
 	user-select: none;
 
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+		margin-bottom: 15px;
+	}
+
+	&__rating {
+		color: #ffd700;
+		@include adaptive-font(20, 20);
+	}
+
+	&__author {
+		font-weight: 800;
+		color: var(--dark-color);
+		@include adaptive-font(20, 20);
+	}
+
 	&__text {
 		margin-bottom: 20px;
+		font-style: italic;
 		@include adaptive-font(18, 18);
 	}
 
@@ -36,7 +55,7 @@
 		gap: 10px;
 	}
 
-	&__info {
+	&-details {
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -56,21 +75,20 @@
 			background-color: var(--accent-color);
 			transform: translateY(-50%);
 		}
-	}
 
-	&__author {
-		font-weight: 800;
-		color: var(--dark-color);
-		@include adaptive-font(20, 20);
-	}
-
-	&__city {
-		position: relative;
-		@include adaptive-font(16, 16);
-
-		&::before {
-			content: 'город ';
+		&__city {
 			position: relative;
+			@include adaptive-font(16, 16);
+
+			&::before {
+				content: 'город ';
+				position: relative;
+			}
+		}
+
+		&__date {
+			color: var(--gray-text-color);
+			@include adaptive-font(14, 14);
 		}
 	}
 

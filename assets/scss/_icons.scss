@@ -12,6 +12,17 @@
 	}
 }
 
+.fa-regular {
+	&::before {
+		content: var(--fa);
+		font-family: Awesome-Regular, sans-serif;
+	}
+}
+
+.fa-star {
+	--fa: '\f005';
+}
+
 .fa-phone {
 	--fa: '\f095';
 }
