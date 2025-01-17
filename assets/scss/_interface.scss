@@ -264,6 +264,12 @@
 				transform: translateX(0);
 			}
 		}
+
+		&--center {
+			display: block;
+			margin: 0 auto;
+			max-width: fit-content;
+		}
 	}
 }
 
